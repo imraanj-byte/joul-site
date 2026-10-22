@@ -1,0 +1,20 @@
+# robots.txt, Joul Online Services
+# Alles mag geïndexeerd worden. Er is niets afgeschermd.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://joulonlineservices.eu/sitemap.xml
+
+# Ook deze crawlers zijn welkom.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /

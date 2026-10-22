@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zo ziet uw klant het | Joul Online Services</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Een voorbeeld van een gesprek met uw klant en uw agenda die live meevult. Met verzonnen gegevens.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M10.6 4.4h5'/%3E%3Cpath d='M15.6 4.4v8.4a5.1 5.1 0 0 1-10.2 0v-1.3'/%3E%3Ccircle cx='10.5' cy='12.9' r='1.9' fill='%231d1d1f' stroke='none'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#ffffff; --bg-2:#f5f5f7; --card:#ffffff; --ink:#1d1d1f; --ink-2:#424245; --muted:#6e6e73;
+  --line:#d2d2d7; --hair:#e8e8ed; --blue:#0071e3; --blue-d:#0062c3; --link:#0066cc; --blue-t:#e8f1fc;
+  --ok:#1d7a38; --warn:#a64b00; --err:#c4161c; --amber:#d98200;
+  --evt:#e6e6eb; --evt-ink:#2c2c2e; --shade:rgba(0,0,0,.035);
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 30px -12px rgba(0,0,0,.12);
+  --shadow-lg:0 40px 90px -40px rgba(0,0,0,.35);
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --gut:max(16px,env(safe-area-inset-left));
+  --hh:44px;
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#000000; --bg-2:#101012; --card:#1c1c1e; --ink:#f5f5f7; --ink-2:#d2d2d7; --muted:#a1a1a6;
+    --line:#424245; --hair:#2c2c2e; --link:#2997ff; --blue-t:#10243a;
+    --ok:#32d74b; --warn:#ff9f0a; --err:#ff6961; --amber:#ff9f0a;
+    --evt:#2c2c2e; --evt-ink:#e5e5ea; --shade:rgba(255,255,255,.04);
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 30px -12px rgba(0,0,0,.6);
+    --shadow-lg:0 40px 90px -40px rgba(0,0,0,.9);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg-2);color:var(--ink);font:400 1rem/1.45 var(--font);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+h1,h2,h3,p{margin:0}
+h1{font-size:1.75rem;line-height:1.1;font-weight:700;letter-spacing:-.035em;text-wrap:balance}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+::selection{background:rgba(0,113,227,.22)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:8px;z-index:300;transform:translateY(-200%);background:var(--blue);color:#fff;padding:10px 16px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+.skip:focus{transform:none}
+.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ic.sm{width:16px;height:16px}
+
+/* ---- kop ---- */
+.top{max-width:1360px;margin:0 auto;padding:0 var(--gut);height:56px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;gap:9px;min-height:44px;color:var(--ink);font-weight:700;font-size:1.0625rem;letter-spacing:-.03em;text-decoration:none}
+.logo svg{width:22px;height:22px;flex:none}
+.tag{font-size:.8125rem;color:var(--muted)}
+
+/* ---- opbouw ---- */
+.app{max-width:1360px;margin:0 auto;padding:4px var(--gut) 24px;display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.rail{display:flex;flex-direction:column;gap:18px;min-width:0}
+.lede{margin-top:8px;color:var(--ink-2);font-size:1rem;max-width:34em}
+.lgd{font-size:.8125rem;font-weight:600;color:var(--muted);margin:0 0 8px;padding:0;display:block}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0}
+
+/* soort zaak */
+.zaken{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.zaak{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:64px;padding:8px 6px;border-radius:14px;background:var(--card);border:1px solid var(--hair);color:var(--ink-2);font-size:.9375rem;font-weight:600;cursor:pointer;transition:border-color .2s,background .2s,color .2s;text-align:center}
+.zaak input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.zaak:has(input:checked){border-color:var(--blue);background:var(--blue-t);color:var(--ink)}
+.zaak:has(input:checked) .ic{color:var(--blue)}
+.zaak:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:3px}
+.zaak:hover{border-color:var(--line)}
+.pk{margin:10px 0 0;font-size:.8125rem;line-height:1.35;color:var(--muted)}
+
+/* situaties */
+.scen{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{display:flex;align-items:flex-start;gap:10px;margin-top:8px;padding:6px 2px;font-size:.8125rem;line-height:1.35;color:var(--muted);cursor:pointer}
+.opt input{flex:none;width:18px;height:18px;margin:0;accent-color:var(--blue);cursor:pointer}
+.sc{display:grid;grid-template-columns:24px 1fr;gap:0 10px;align-items:center;text-align:left;min-height:56px;padding:8px 12px;border-radius:14px;background:var(--card);border:1px solid var(--hair);transition:border-color .2s,background .2s,transform .12s}
+.sc .ic{color:var(--blue);grid-row:1/3;width:22px;height:22px}
+.sc b{font-size:.9375rem;font-weight:600;line-height:1.2;letter-spacing:-.015em}
+.sc small{font-size:.8125rem;color:var(--muted);line-height:1.25;display:none}
+.sc:hover{border-color:var(--line)}
+.sc:active{transform:scale(.985)}
+.sc[aria-pressed=true]{border-color:var(--blue);background:var(--blue-t)}
+
+/* rondleiding */
+.tourbox{display:flex;flex-direction:column;gap:10px}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:10px 22px;border-radius:999px;border:1px solid transparent;font:600 1.0625rem/1.2 var(--font);letter-spacing:-.015em;background:var(--blue);color:#fff;transition:background .2s,transform .12s;width:100%}
+.pill:hover{background:var(--blue-d)}
+.pill:active{transform:scale(.985)}
+.pill.ghost{background:transparent;color:var(--link);border-color:var(--line)}
+.pill.ghost:hover{background:var(--card)}
+.tour-row{display:flex;gap:8px}
+.tour-row .pill{flex:1}
+.prog{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.prog i{height:4px;border-radius:2px;background:var(--hair);transition:background .4s}
+.prog i.on{background:var(--blue)}
+.prog i.done{background:var(--blue);opacity:.45}
+[hidden]{display:none!important}
+
+/* schakelaar */
+.sw{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 14px;min-height:56px;border-radius:14px;background:var(--card);border:1px solid var(--hair)}
+.sw .tx{flex:1;font-size:.9375rem;line-height:1.3;font-weight:600;letter-spacing:-.015em}
+.sw .tx small{display:block;font-weight:400;color:var(--muted);font-size:.8125rem;margin-top:1px}
+.trk{position:relative;flex:none;width:46px;height:28px;border-radius:999px;background:var(--line);transition:background .25s}
+.trk::after{content:"";position:absolute;top:2px;left:2px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .25s var(--ease)}
+.sw[aria-checked=true] .trk{background:var(--ok)}
+.sw[aria-checked=true] .trk::after{transform:translateX(18px)}
+
+/* ---- telefoon ---- */
+.phonecol{min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.owner{font-size:.875rem;font-weight:600;color:var(--muted)}
+.phone{--ph:clamp(500px,76svh,640px);width:min(340px,100%);height:var(--ph);border-radius:46px;background:#111;padding:10px;box-shadow:var(--shadow-lg),inset 0 0 0 2px #2a2a2c;flex:none}
+.screen{position:relative;height:100%;border-radius:37px;overflow:hidden;display:flex;flex-direction:column;background:#efeae2;color:#111;isolation:isolate}
+.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:84px;height:24px;border-radius:14px;background:#000;z-index:3}
+.status{display:flex;justify-content:space-between;align-items:center;padding:15px 26px 6px;font:600 .875rem/1 var(--font);background:#f6f6f6;color:#000;letter-spacing:-.01em}
+.status .sb{display:flex;gap:6px;align-items:center}
+.status .sb svg{height:11px;width:auto;fill:#000;stroke:none}
+.wa-head{display:flex;align-items:center;gap:10px;padding:6px 14px 10px;background:#f6f6f6;border-bottom:1px solid #dcdcdc}
+.av{width:38px;height:38px;border-radius:50%;background:#1d8139;color:#fff;display:grid;place-items:center;font-weight:700;font-size:.8125rem;letter-spacing:0;flex:none}
+.wa-head b{display:block;font-size:.9375rem;font-weight:600;line-height:1.2;color:#111}
+.wa-head small{display:block;font-size:.75rem;color:#56565b;line-height:1.2}
+.wa-chat{flex:1;min-height:0;overflow-y:auto;padding:12px 10px 14px;display:flex;flex-direction:column;gap:6px;overscroll-behavior:contain;scrollbar-width:none;background:radial-gradient(rgba(0,0,0,.045) 1px,transparent 1.6px) 0 0/16px 16px,#efeae2}
+.wa-chat::-webkit-scrollbar{display:none}
+.msg{display:flex;flex-direction:column;animation:pop .34s var(--ease) both}
+.msg.in{align-items:flex-start}.msg.out{align-items:flex-end}
+.grp{display:flex;flex-direction:column;gap:4px;width:fit-content;max-width:88%}
+.b{padding:7px 10px 5px;border-radius:12px;font-size:.9375rem;line-height:1.32;box-shadow:0 1px 1px rgba(0,0,0,.13);overflow-wrap:anywhere}
+.in .b{background:#fff;border-top-left-radius:4px}
+.out .b{background:#d9fdd3;border-top-right-radius:4px}
+.b .l{display:block}
+.b .l.h{font-weight:600}
+.b .l.gap{margin-top:7px}
+.b .l.num{font-variant-numeric:tabular-nums}
+.b .t{display:flex;justify-content:flex-end;align-items:center;gap:3px;margin-top:2px;font-size:.75rem;line-height:1;color:#5f6b72}
+.b .t .ic{width:15px;height:15px;stroke:#34a4dc;stroke-width:2}
+.qr{display:flex;flex-direction:column;gap:4px}
+.qr button{min-height:44px;padding:8px 12px;border:0;border-radius:12px;background:#fff;color:#0a62c9;font-size:.9375rem;font-weight:600;box-shadow:0 1px 1px rgba(0,0,0,.13);position:relative;overflow:hidden;transition:background .25s,color .25s,opacity .3s,transform .15s}
+.qr button:active{transform:scale(.98)}
+.qr button:disabled{cursor:default}
+.qr.done button:not(.on){opacity:.45}
+.qr button.on{background:#d9fdd3;color:#0b4a1c}
+.qr.attn button:not(:disabled){animation:nudge 2.6s 3s ease-in-out infinite}
+.qr button.tap::after,.bq button.tap::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:rgba(0,113,227,.35);animation:ripple .5s ease-out both}
+.pillmsg{align-self:center;max-width:92%;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.88);color:#4a4a50;font-size:.8125rem;line-height:1.3;text-align:center;box-shadow:0 1px 1px rgba(0,0,0,.08);animation:pop .34s var(--ease) both}
+.pillmsg.note{background:#fff4c8;color:#4d4100;border-radius:12px;font-size:.75rem;padding:7px 12px}
+.pillmsg.missed{display:inline-flex;align-items:center;gap:8px;color:#8c1d1d;background:#fff}
+.pillmsg.missed .ic{width:17px;height:17px;stroke:#c4161c}
+.typing{align-self:flex-start;display:flex;gap:4px;padding:11px 13px;border-radius:12px;border-top-left-radius:4px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.13);animation:pop .3s var(--ease) both}
+.typing i{width:7px;height:7px;border-radius:50%;background:#8a8f94;animation:dot 1.1s infinite ease-in-out}
+.typing i:nth-child(2){animation-delay:.16s}.typing i:nth-child(3){animation-delay:.32s}
+.idle{margin:auto;max-width:15em;text-align:center;color:#5b5b60;font-size:.9375rem;line-height:1.35}
+.idle .ic{display:block;margin:0 auto 10px;width:28px;height:28px;color:#8a8a90}
+.wa-compose{display:flex;align-items:center;gap:8px;padding:8px 10px 14px;background:#f6f6f6;border-top:1px solid #dcdcdc}
+.field{flex:1;min-height:38px;border-radius:19px;background:#fff;border:1px solid #dcdcdc;padding:8px 14px;font-size:.9375rem;line-height:1.2;color:#111;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;position:relative}
+.field .ph{color:#767680}
+.field .caret{display:inline-block;width:1.5px;height:1.05em;background:#1d8139;vertical-align:-.15em;margin-left:1px;animation:blink 1s steps(1) infinite}
+.send{width:38px;height:38px;border-radius:50%;background:#c9cdd1;color:#fff;display:grid;place-items:center;flex:none;transition:background .25s}
+.send.on{background:#1d8139}
+.send .ic{width:18px;height:18px;stroke-width:2}
+.caption{min-height:3.6em;max-width:21em;text-align:center;color:var(--ink-2);font-size:.9375rem;line-height:1.4;text-wrap:balance}
+.hint{min-height:1.3em;text-align:center;font-size:.8125rem;color:var(--muted);max-width:22em}
+.next{width:100%;max-width:340px}
+
+/* ---- agenda ---- */
+.side{min-width:0;display:flex;flex-direction:column;gap:16px}
+.card{background:var(--card);border-radius:22px;box-shadow:var(--shadow);padding:16px}
+.ag-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.ag-head h2{font-size:1.125rem;font-weight:700;letter-spacing:-.03em}
+.ag-head span{font-size:.875rem;color:var(--muted)}
+.statusline{display:flex;align-items:center;gap:10px;margin:10px 0 12px;min-height:44px;padding:8px 12px;border-radius:12px;background:var(--bg-2);font-size:.9375rem;line-height:1.3;color:var(--ink)}
+.statusline .dot{width:9px;height:9px;border-radius:50%;background:var(--ok);flex:none}
+.statusline.flash{animation:flash 1.2s var(--ease)}
+.cal{--o0:0;--o1:540;position:relative}
+.cal-head{display:grid;grid-template-columns:36px repeat(5,minmax(0,1fr));align-items:end}
+.dh{text-align:center;padding:2px 0 6px}
+.dh small{display:block;font-size:.75rem;color:var(--muted);line-height:1.2}
+.dh b{display:inline-grid;place-items:center;min-width:28px;height:28px;border-radius:50%;font-size:.9375rem;font-weight:600;transition:background .3s,color .3s}
+.dh.now b{background:var(--blue);color:#fff}
+.cal-body{display:grid;grid-template-columns:36px minmax(0,1fr);height:calc(10*var(--hh))}
+.hours{position:relative}
+.hours span{position:absolute;right:6px;font-size:.75rem;color:var(--muted);line-height:1;transform:translateY(-50%);font-variant-numeric:tabular-nums}
+.days{position:relative;border-radius:10px;overflow:hidden;background:repeating-linear-gradient(to bottom,var(--hair) 0 1px,transparent 1px var(--hh));box-shadow:inset 0 0 0 1px var(--hair)}
+.days::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to right,transparent 0 calc(20% - 1px),var(--hair) calc(20% - 1px) 20%);pointer-events:none}
+.shade{position:absolute;left:0;right:0;background:var(--shade)}
+.shade.a{top:0;height:calc(var(--o0)*var(--hh)/60)}
+.shade.b{top:calc(var(--o1)*var(--hh)/60);bottom:0}
+.closed{position:absolute;top:0;bottom:0;left:calc(var(--d)*20%);width:20%;background:var(--shade);display:grid;place-items:start center;padding-top:10px;font-size:.75rem;color:var(--muted)}
+.hl{position:absolute;top:0;bottom:0;left:calc(var(--d)*20%);width:20%;background:var(--blue-t);opacity:0;transition:opacity .5s}
+.hl.on{opacity:1}
+.nowline{position:absolute;z-index:3;left:calc(var(--d)*20%);width:20%;top:calc(var(--s)*var(--hh)/60);height:2px;background:var(--err);transition:top .6s var(--ease),left .4s var(--ease);pointer-events:none}
+.nowline::before{content:"";position:absolute;left:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--err)}
+.ev{position:absolute;z-index:2;left:calc(var(--d)*20% + 2px);width:calc(20% - 4px);top:calc(var(--s)*var(--hh)/60 + 1px);height:calc(var(--du)*var(--hh)/60 - 2px);border-radius:8px;padding:2px 6px;overflow:hidden;font-size:.75rem;line-height:1.1;background:var(--evt);color:var(--evt-ink);transition:left .75s var(--ease),top .75s var(--ease),height .5s var(--ease),background .4s,color .4s,opacity .4s;animation:evIn .55s var(--ease) both}
+.ev .n{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev .s{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.85}
+.ev.short .n,.ev.short .s{display:inline}
+.ev.short .s::before{content:" · "}
+.ev .s:empty::before{content:""}
+.ev.mine{background:var(--blue);color:#fff}
+.ev.pending{background:var(--card);color:var(--link);outline:1.5px dashed var(--blue);outline-offset:-1.5px}
+.ev.offer{z-index:1;background:transparent;color:var(--link);outline:1.5px dashed var(--blue);outline-offset:-1.5px;animation:ghost .5s var(--ease) both}
+.ev.cancel{opacity:.55}
+.ev.cancel .n{text-decoration:line-through}
+.ev.flag{background:var(--card);color:var(--warn);outline:2px solid var(--amber);outline-offset:-2px}
+.ev.gone{animation:evOut .45s var(--ease) both;pointer-events:none}
+.ev .mk{position:absolute;right:6px;top:50%;display:none}
+.ev.unconf,.ev.conf{padding-right:18px}
+.ev.unconf .mk{display:block;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--amber)}
+.ev.conf .mk{display:block;width:9px;height:5px;margin-top:-4px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:.8125rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:10px;border-radius:3px;background:var(--evt);display:inline-block}
+.legend i.m{background:var(--blue)}
+.legend i.p{background:transparent;outline:1.5px dashed var(--blue);outline-offset:-1.5px}
+.legend i.u{width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.sw[hidden]{display:none}
+.ovl{display:none;min-height:180px}
+.agenda.list .ovl{display:block}
+.agenda.list .cal,.agenda.list .legend{display:none}
+.ovl ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ovl .none{color:var(--muted);font-size:.9375rem;padding:14px 4px}
+.ov{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:start;padding:12px;border-radius:14px;background:var(--bg-2);animation:pop .4s var(--ease) both}
+.ov .ib{grid-row:1/span 3;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--evt);color:var(--evt-ink)}
+.ov .ib .ic{width:18px;height:18px}
+.ov.mine .ib{background:var(--blue);color:#fff}
+.ov b{font-weight:600;font-size:.9375rem;line-height:1.3}
+.ov .d{font-size:.875rem;line-height:1.3;color:var(--ink-2)}
+.ov .d:empty{display:none}
+.ov .m{font-size:.8125rem;font-weight:600;line-height:1.3;color:var(--ink-2)}
+.ov.pending{background:var(--card);outline:1.5px dashed var(--blue);outline-offset:-1.5px}
+.ov.pending .m{color:var(--link)}
+.ov.flag{background:var(--card);outline:2px solid var(--amber);outline-offset:-2px}
+.ov.flag .m{color:var(--warn)}
+.ov.conf .m{color:var(--ok)}
+.ov.cancel{opacity:.55}
+.ov.cancel b{text-decoration:line-through}
+.ov.gone{animation:evOut .45s var(--ease) both;pointer-events:none}
+
+.below{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.card h3{font-size:1rem;font-weight:700;letter-spacing:-.025em}
+.card .sub{font-size:.8125rem;color:var(--muted);margin-top:1px}
+.boss .bbody{margin-top:10px;border-radius:14px;background:#efeae2;padding:10px;min-height:128px;display:flex;flex-direction:column;gap:6px;color:#111;background-image:radial-gradient(rgba(0,0,0,.045) 1px,transparent 1.6px);background-size:16px 16px}
+.boss .b{font-size:.875rem}
+.boss .grp{width:100%;max-width:100%}
+.boss .empty{margin:auto;text-align:center;font-size:.875rem;color:#5b5b60;max-width:17em}
+.bq{display:flex;gap:6px}
+.bq button{flex:1;min-height:40px;border:0;border-radius:10px;background:#fff;font-size:.875rem;font-weight:600;color:#0a62c9;display:inline-flex;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden;box-shadow:0 1px 1px rgba(0,0,0,.13);pointer-events:none}
+.bq button .ic{width:16px;height:16px;stroke-width:2.2}
+.bq button.go .ic{color:#1d7a38}
+.bq button.no{color:#8a1d1d}
+.bq button.on{background:#d9fdd3;color:#0b4a1c}
+.late .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.cnt{min-width:26px;height:26px;padding:0 8px;border-radius:13px;background:var(--bg-2);display:inline-grid;place-items:center;font-size:.8125rem;font-weight:600;color:var(--muted);transition:background .3s,color .3s}
+.cnt.has{background:var(--amber);color:#1d1d1f}
+.late ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.late li{padding:10px 12px;border-radius:12px;background:var(--bg-2);font-size:.9375rem;line-height:1.3;animation:pop .4s var(--ease) both}
+.late li b{display:block;font-weight:600}
+.late li span{color:var(--ink-2);font-size:.875rem}
+.late .none{color:var(--muted);font-size:.9375rem;padding:10px 0 2px}
+.foot{max-width:1360px;margin:0 auto;padding:6px var(--gut) 36px;font-size:.8125rem;color:var(--muted)}
+
+/* ---- vaste balk onderaan (telefoon) ---- */
+.dock{position:fixed;left:50%;transform:translate(-50%,140%);bottom:calc(10px + env(safe-area-inset-bottom));width:min(calc(100% - 24px),520px);z-index:60;display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 14px;border:0;border-radius:16px;background:var(--ink);color:var(--bg);text-align:left;font-size:.9375rem;line-height:1.3;box-shadow:0 10px 30px -8px rgba(0,0,0,.45);transition:transform .45s var(--ease)}
+.dock.show{transform:translate(-50%,0)}
+.dock .ic{width:18px;height:18px;flex:none}
+body.pad{padding-bottom:84px}
+
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.96)}}
+@keyframes evIn{from{opacity:0;transform:scale(.88)}}
+@keyframes ghost{from{opacity:0}}
+@keyframes evOut{to{opacity:0;transform:scale(.9)}}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+@keyframes blink{50%{opacity:0}}
+@keyframes ripple{from{transform:scale(.4);opacity:1}to{transform:scale(3.4);opacity:0}}
+@keyframes nudge{0%,88%,100%{transform:none}94%{transform:scale(1.02)}}
+@keyframes flash{0%{background:var(--blue-t);box-shadow:0 0 0 3px rgba(0,113,227,.25)}100%{background:var(--bg-2);box-shadow:0 0 0 0 rgba(0,113,227,0)}}
+
+/* ---- kleine schermen: situaties zonder ondertitel, melding van de baas als vliegende kaart ---- */
+@media (max-width:1099px){
+  .boss{position:fixed;left:50%;bottom:calc(72px + env(safe-area-inset-bottom));width:min(calc(100% - 24px),420px);z-index:70;transform:translate(-50%,180%);transition:transform .5s var(--ease);box-shadow:0 18px 50px -12px rgba(0,0,0,.5)}
+  .boss.show{transform:translate(-50%,0)}
+  .boss .bbody{min-height:0}
+}
+@media (max-width:719px){
+  .ev .s{display:none}
+  .ev{padding:2px 4px;font-size:.6875rem}
+  .ev.unconf,.ev.conf{padding-right:10px}
+  .ev .mk{right:3px}
+  .hours span{right:4px}
+  .cal-head,.cal-body{grid-template-columns:30px repeat(5,minmax(0,1fr))}
+  .cal-body{grid-template-columns:30px minmax(0,1fr)}
+  :root{--hh:41px}
+  .card{padding:14px 12px}
+  .phone{--ph:clamp(470px,74svh,600px)}
+}
+@media (min-width:720px){
+  .app{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px}
+  .rail{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;align-items:start}
+  .rail .intro{grid-column:1/-1}
+  .sc small{display:block}
+  .scen{grid-template-columns:1fr}
+}
+@media (min-width:1100px){
+  .app{grid-template-columns:304px 360px minmax(0,1fr);column-gap:32px;align-items:start}
+  .rail{grid-column:auto;display:flex}
+  .phonecol{position:sticky;top:12px}
+  .phone{--ph:clamp(540px,calc(100svh - 190px),680px)}
+  .below{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .dock,body.pad{padding-bottom:0}
+  .card{padding:20px}
+  .scen{gap:6px}
+  .sc{min-height:52px;padding:6px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7l5.66 5.65a8 8 0 1 1-11.32 0z"/></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></symbol>
+<symbol id="i-missed" viewBox="0 0 24 24"><path d="M22 2l-6 6M16 2l6 6"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-calplus" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></symbol>
+<symbol id="i-calmove" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 16h8m-2.5-2.5L16 16l-2.5 2.5"/></symbol>
+<symbol id="i-calx" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M10 14l4 4M14 14l-4 4"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.5" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/><rect x="13.5" y="5" width="4" height="14" rx="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4.5 4.5L19 7"/></symbol>
+<symbol id="i-checks" viewBox="0 0 24 24"><path d="M2 13l4.5 4.5L15 8M10 16.5l1 1L21 7"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L3 21l1.9-5.9A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#hoofd">Naar de inhoud</a>
+<header class="top">
+  <a class="logo" href="./" aria-label="Joul Online Services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M10.6 4.4h5"/><path d="M15.6 4.4v8.4a5.1 5.1 0 0 1-10.2 0v-1.3"/><circle cx="10.5" cy="12.9" r="1.9" fill="currentColor" stroke="none"/></svg><span>Joul</span></a>
+  <span class="tag">Voorbeeld</span>
+</header>
+
+<main id="hoofd" class="app">
+  <div class="rail">
+    <div class="intro">
+      <h1>Zo ziet uw klant het</h1>
+      <p class="lede" id="lede">Kies uw soort zaak en een situatie. U ziet het gesprek op de telefoon van de klant en tegelijk wat er in uw agenda gebeurt.</p>
+    </div>
+
+    <fieldset class="zakenbox">
+      <legend class="lgd">Uw soort zaak</legend>
+      <div class="zaken" id="zaken">
+        <label class="zaak"><input type="radio" name="zaak" value="garage" checked><svg class="ic" aria-hidden="true"><use href="#i-wrench"/></svg><span>Garage</span></label>
+        <label class="zaak"><input type="radio" name="zaak" value="loodgieter"><svg class="ic" aria-hidden="true"><use href="#i-drop"/></svg><span>Loodgieter</span></label>
+        <label class="zaak"><input type="radio" name="zaak" value="kapper"><svg class="ic" aria-hidden="true"><use href="#i-scissors"/></svg><span>Kapper</span></label>
+      </div>
+      <p class="pk" id="pk"></p>
+    </fieldset>
+
+    <div class="scenbox" role="group" aria-labelledby="scen-l">
+      <div class="lgd" id="scen-l">Wat gebeurt er?</div>
+      <div class="scen" id="scen">
+        <button class="sc" type="button" data-s="1" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-missed"/></svg><b>Gemiste oproep</b><small>Bericht naar de beller</small></button>
+        <button class="sc" type="button" data-s="2" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-calplus"/></svg><b>Afspraak boeken</b><small>De klant kiest een plek</small></button>
+        <button class="sc" type="button" data-s="3" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-calmove"/></svg><b>Verplaatsen</b><small>Naar een andere plek</small></button>
+        <button class="sc" type="button" data-s="4" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-calx"/></svg><b>Te laat annuleren</b><small>De regel van uw zaak</small></button>
+        <button class="sc" type="button" data-s="5" aria-pressed="false" hidden><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg><b>Herinnering</b><small>De dag ervoor</small></button>
+        <button class="sc" type="button" data-s="6" aria-pressed="false" hidden><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><b>Ochtendlijstje</b><small>Voor u, om 07:30</small></button>
+      </div>
+      <label class="opt"><input type="checkbox" id="compleet"><span>Toon ook Vangnet Compleet (op aanvraag): herinnering en ochtendlijstje</span></label>
+    </div>
+
+    <div class="tourbox">
+      <button class="pill" id="tour" type="button"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><span>Speel alles af</span></button>
+      <p class="pk" id="tourSm">Alle vier situaties na elkaar. U kunt pauzeren.</p>
+      <div class="tour-row" id="tourRow" hidden>
+        <button class="pill ghost" id="pause" type="button"><svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg><span id="pauseTx">Pauzeer</span></button>
+        <button class="pill ghost" id="stop" type="button"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg><span>Stop</span></button>
+      </div>
+      <div class="prog" id="prog" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <button class="sw" id="approve" type="button" role="switch" aria-checked="true">
+      <span class="tx">Eerste maand: u keurt elke afspraak goed<small>Zet uit om te zien hoe het daarna gaat.</small></span>
+      <span class="trk" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <section class="phonecol" id="phonecol" aria-label="Telefoon">
+    <div class="owner" id="owner">Telefoon van de klant</div>
+    <div class="phone">
+      <div class="screen">
+        <div class="island"></div>
+        <div class="status"><span id="clock">10:12</span><span class="sb" aria-hidden="true"><svg viewBox="0 0 18 11"><rect x="0" y="7" width="3" height="4" rx=".8"/><rect x="5" y="5" width="3" height="6" rx=".8"/><rect x="10" y="2.5" width="3" height="8.5" rx=".8"/><rect x="15" y="0" width="3" height="11" rx=".8"/></svg><svg viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3.2" fill="none" stroke="#000" stroke-opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2"/><rect x="24" y="4" width="1.8" height="4" rx=".9" fill-opacity=".45"/></svg></span></div>
+        <div class="wa-head"><span class="av" id="av">GP</span><div><b id="who">Garage Peeters</b><small id="sub">Zakelijk account</small></div></div>
+        <div class="wa-chat" id="chat" role="log" aria-live="polite" aria-label="Gesprek"></div>
+        <div class="wa-compose" aria-hidden="true"><div class="field"><span id="typed"></span><span class="caret" id="caret" hidden></span><span class="ph" id="ph">Bericht</span></div><span class="send" id="send"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg></span></div>
+      </div>
+    </div>
+    <p class="caption" id="caption" aria-live="polite"></p>
+    <p class="hint" id="hint"></p>
+    <div class="next" id="next" hidden><button class="pill ghost" type="button" id="nextBtn"></button></div>
+  </section>
+
+  <section class="side" aria-label="Uw agenda">
+    <div class="card agenda" id="agenda">
+      <div class="ag-head"><h2 id="agTitle">Agenda van Garage Peeters</h2><span id="agWeek"></span></div>
+      <p class="statusline" id="statusline" role="status"><i class="dot" aria-hidden="true"></i><span id="status">Dit is de agenda van de week. Kies een situatie.</span></p>
+      <div class="cal" id="cal">
+        <div class="cal-head" id="calHead"><span></span></div>
+        <div class="cal-body"><div class="hours" id="hours" aria-hidden="true"></div><div class="days" id="days"><div class="shade a"></div><div class="shade b"></div><div id="plot"></div></div></div>
+      </div>
+      <div class="ovl" id="ovl"><p class="none" id="ovNone">Hier verschijnt wat de assistent voor u opvangt: terugbelverzoeken en aanvragen.</p><ul id="ovlList"></ul></div>
+      <div class="legend" aria-hidden="true"><span><i></i>Bestaande afspraak</span><span><i class="m"></i>Via de assistent</span><span><i class="p"></i>Wacht op u</span><span id="legU" hidden><i class="u"></i>Klant bevestigde nog niet</span></div>
+    </div>
+    <div class="below">
+      <div class="card boss" id="boss">
+        <h3>Uw telefoon</h3>
+        <p class="sub">Zo ziet u het zelf, op WhatsApp</p>
+        <div class="bbody" id="bossBody"></div>
+      </div>
+      <div class="card late" id="lateCard">
+        <div class="head"><div><h3>Te laat afgebeld</h3><p class="sub">Lijstje voor u</p></div><span class="cnt" id="lateCnt">0</span></div>
+        <ul id="lateList"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<p class="foot">Voorbeeld met verzonnen gegevens.</p>
+
+<button class="dock" id="dock" type="button" aria-hidden="true" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-calplus"/></svg><span id="dockTx"></span><svg class="ic" aria-hidden="true" style="margin-left:auto"><use href="#i-down"/></svg></button>
+<noscript><p class="foot">Voor dit voorbeeld is JavaScript nodig.</p></noscript>
+
+<script>
+(function(){
+'use strict';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const qs=new URLSearchParams(location.search);
+const SPEED=Math.min(20,Math.max(.5,+qs.get('tempo')||1));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const CANCEL={};
+const NS='http://www.w3.org/2000/svg';
+const ico=(id,cls)=>{const s=document.createElementNS(NS,'svg');s.setAttribute('class','ic'+(cls?' '+cls:''));s.setAttribute('aria-hidden','true');const u=document.createElementNS(NS,'use');u.setAttribute('href','#'+id);s.appendChild(u);return s};
+
+/* ---------- datums: de week erna, steeds ma t/m vr ---------- */
+const DAYN=['maandag','dinsdag','woensdag','donderdag','vrijdag'];
+const DAYS=['ma','di','wo','do','vr'];
+const MONL=['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+const MONS=['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec'];
+const wk=(()=>{const d=new Date();d.setHours(12,0,0,0);do{d.setDate(d.getDate()+1)}while(d.getDay()!==1);return d})();
+const dt=i=>{const d=new Date(wk);d.setDate(d.getDate()+i);return d};
+const dayLong=i=>DAYN[i]+' '+dt(i).getDate()+' '+MONL[dt(i).getMonth()];
+const dayBtn=i=>DAYN[i][0].toUpperCase()+DAYN[i].slice(1)+' '+dt(i).getDate()+' '+MONS[dt(i).getMonth()];
+const hm=m=>{m=((m%1440)+1440)%1440;return Math.floor(m/60)+':'+String(m%60).padStart(2,'0')};
+const T=s=>{const p=s.split(':');return +p[0]*60+ +p[1]};
+const when=(d,s)=>dayLong(d)+' om '+hm(s);
+const weekRange=()=>{const a=dt(0),b=dt(4);return a.getMonth()===b.getMonth()?a.getDate()+' – '+b.getDate()+' '+MONL[b.getMonth()]:a.getDate()+' '+MONS[a.getMonth()]+' – '+b.getDate()+' '+MONS[b.getMonth()]};
+const FROM=8*60; // de agenda toont 8:00 tot 18:00
+
+/* ---------- de drie zaken (verzonnen) ---------- */
+const BIZ={
+garage:{
+  name:'Garage Peeters',kind:'Garage',ini:'GP',icon:'i-wrench',phone:'089 00 12 00',
+  p:{name:'Jan M.'},open:[8,17],closed:[],tag:'Banden',dur:45,
+  pk:'Dit voorbeeld toont Vangnet Agenda: afspraken komen rechtstreeks in uw agenda.',
+  base:[[0,'8:00',90,'Els D.','Kleine beurt'],[0,'10:30',45,'Tom V.','Banden'],[0,'13:30',60,'Ruben P.','Airco'],
+    [1,'8:30',45,'Mia S.','Banden'],[1,'9:30',90,'Koen B.','Kleine beurt'],[1,'11:30',45,'Rik D.','Banden'],[1,'13:00',45,'Lars H.','Banden',1],[1,'15:00',60,'Eva M.','Remmen',1],
+    [2,'8:00',45,'Wim T.','Banden'],[2,'9:00',45,'Nina G.','Banden'],[2,'10:30',90,'Piet J.','Kleine beurt'],[2,'14:30',45,'Sara W.','Banden'],
+    [3,'8:00',60,'Bart L.','Remmen'],[3,'10:30',45,'Jos A.','Banden'],[3,'13:00',60,'Lotte C.','Airco'],[3,'15:30',45,'Fien R.','Banden'],
+    [4,'9:30',60,'Hugo K.','Remmen'],[4,'11:00',45,'Bea V.','Banden'],[4,'14:00',90,'Tim R.','Kleine beurt']],
+  offerBook:[[3,'9:30'],[3,'14:00'],[4,'8:30']],offerMove:[[3,'14:00'],[4,'8:30'],[4,'15:45']],pickBook:0,pickMove:1,
+  appt:{3:[3,'9:30'],4:[3,'9:30'],5:[2,'13:00']},
+  lateSeed:[{n:'Noor L.',t:'wilde gisteren annuleren, te laat. U belt terug.'}],
+  t:{
+   hello:'Goedendag, u belde Garage Peeters en we konden net niet opnemen. Dit is de automatische assistent van de garage. Waarvoor belde u? U kunt hier ook een afspraak maken.',
+   bossMissed:'Gemiste oproep van 0470 00 12 34. De beller kreeg een bericht van de assistent.',
+   ask:'Ik wil graag banden laten wisselen.',
+   offer:'Goedendag, dit is de automatische assistent van Garage Peeters. Voor banden wisselen (ongeveer 45 minuten) zijn deze plekken vrij:',
+   pending:'Bedankt. Garage Peeters bevestigt uw afspraak zo snel mogelijk.',
+   bossNew:w=>'Nieuwe afspraak: Jan M., banden wisselen, '+w+'. Goedkeuren?',
+   done:w=>'Uw afspraak staat vast: banden wisselen, '+w+' bij Garage Peeters. Duur ongeveer 45 minuten. Verplaatsen of annuleren kan hier.',
+   askMove:'Ik wil mijn afspraak verplaatsen.',
+   moveQ:w=>'Natuurlijk. Uw afspraak is nu '+w+'. Naar welke plek wilt u verplaatsen?',
+   pendingMove:'Bedankt. Garage Peeters bevestigt de wijziging zo snel mogelijk.',
+   bossMove:w=>'Wijziging: Jan M. wil verplaatsen naar '+w+'. Goedkeuren?',
+   moved:w=>'Uw afspraak is verplaatst naar '+w+'.'+remTxt(),
+   askCancel:'Ik wil mijn afspraak annuleren.',
+   rem:m=>'Goedendag Jan, morgen om '+m+' verwachten we uw Opel Corsa voor banden wisselen bij Garage Peeters. Dit is een automatisch bericht van de garage.',
+   late:m=>'Uw afspraak is morgen om '+m+'. Annuleren in dit gesprek kan tot 24 uur vooraf. Daarna vragen we u de garage te bellen op 089 00 12 00. De garage weet nu dat u wilde annuleren.',
+   bossLate:m=>'Jan M. wil de afspraak van morgen om '+m+' annuleren. Dat is binnen 24 uur. Wilt u terugbellen?',
+   lateNote:m=>'wil morgen om '+m+' annuleren. Te laat: u belt terug.',
+   lateCap:'De assistent leest de regel van uw zaak voor. Over uitzonderingen beslist u zelf.'
+  }},
+loodgieter:{
+  name:'Loodgieterij Maes',kind:'Loodgieter',ini:'LM',icon:'i-drop',phone:'089 00 12 00',
+  p:{name:'Sofie V.'},open:[8,17],closed:[],tag:'Plaatsbezoek',dur:60,intake:true,list:true,det:'Lekkage, Dorpsstraat 12 in Genk',
+  pk:'Dit voorbeeld toont Vangnet: de gemiste oproep wordt opgevolgd. Zonder agenda: u bevestigt plaatsbezoeken zelf.',
+  lbl:{1:['Gemiste oproep','Op de werf, bericht naar de beller'],2:['Plaatsbezoek aanvragen','De klant kiest een moment'],3:['Verplaatsen','Naar een ander moment']},
+  remL:['Ik ben thuis','Verplaatsen','Annuleren'],
+  base:[[1,'10:30',60,'Koen B.','Ketel'],[1,'13:00',60,'Lars H.','Lekkage'],[1,'14:30',60,'Eva M.','Verwarming']],
+  offerBook:[[3,'9:30'],[3,'16:00'],[4,'12:30']],offerMove:[[2,'11:30'],[4,'12:30'],[3,'16:00']],pickBook:0,pickMove:1,
+  appt:{3:[3,'9:30'],4:[3,'9:30'],5:[2,'14:00']},
+  lateSeed:[{n:'Noor L.',t:'wilde gisteren annuleren, te laat. U belt terug.'}],
+  callSeed:[{n:'0470 00 45 67',t:'lekkage, Dorpsstraat 12 in Genk'},{n:'0470 00 89 10',t:'ketel, Kerkstraat 4 in Hasselt'}],
+  t:{
+   hello:'Goedendag, u belde Loodgieterij Maes. We staan op een werf en konden niet opnemen. Dit is de automatische assistent van het bedrijf. Wat is er aan de hand? Ruikt u gas of is er brand? Bel dan meteen 112.',
+   probL:['Lekkage','Verstopping','Ketel of verwarming','Iets anders'],
+   addrQ:'Dank u. Op welk adres moeten we zijn?',
+   addr:'Dorpsstraat 12, Genk',
+   whenQ:'En wanneer mogen we u terugbellen?',
+   whenL:['Vandaag nog','Morgenvoormiddag','Morgennamiddag'],
+   conf:(p,w)=>'Genoteerd: '+p+', Dorpsstraat 12 in Genk. Loodgieterij Maes belt u '+w+' terug op dit nummer. Liever een plaatsbezoek aanvragen? Dat kan hier ook.',
+   bossCall:(p,w)=>'Gemiste oproep op de werf. Terugbellen: 0470 00 12 34, '+p+', Dorpsstraat 12 in Genk, '+w+'.',
+   ask:'Ik wil graag een plaatsbezoek voor een lekkage. Adres: Dorpsstraat 12, Genk.',
+   offer:'Goedendag, dit is de automatische assistent van Loodgieterij Maes. Voor een plaatsbezoek (ongeveer 60 minuten) kan Loodgieterij Maes deze momenten voorstellen:',
+   pending:'Bedankt. Loodgieterij Maes bevestigt uw plaatsbezoek zo snel mogelijk.',
+   bossNew:w=>'Plaatsbezoek gevraagd: Sofie V., lekkage, Dorpsstraat 12 in Genk, '+w+'. Goedkeuren?',
+   done:w=>'Uw plaatsbezoek staat vast: '+w+' bij Dorpsstraat 12 in Genk. Duur ongeveer 60 minuten. Verplaatsen of annuleren kan hier.',
+   askMove:'Ik wil mijn afspraak verplaatsen.',
+   moveQ:w=>'Natuurlijk. Uw plaatsbezoek is nu '+w+'. Naar welke plek wilt u verplaatsen?',
+   pendingMove:'Bedankt. Loodgieterij Maes bevestigt de wijziging zo snel mogelijk.',
+   bossMove:w=>'Wijziging: Sofie V. wil het plaatsbezoek verplaatsen naar '+w+'. Goedkeuren?',
+   moved:w=>'Uw plaatsbezoek is verplaatst naar '+w+'.'+remTxt(),
+   askCancel:'Ik wil mijn afspraak annuleren.',
+   rem:m=>'Goedendag Sofie, morgen om '+m+' komt Loodgieterij Maes langs voor uw plaatsbezoek. Dit is een automatisch bericht van het bedrijf.',
+   late:m=>'Uw plaatsbezoek is morgen om '+m+'. Annuleren in dit gesprek kan tot 24 uur vooraf. Daarna vragen we u het bedrijf te bellen op 089 00 12 00. Het bedrijf weet nu dat u wilde annuleren.',
+   bossLate:m=>'Sofie V. wil het plaatsbezoek van morgen om '+m+' annuleren. Dat is binnen 24 uur. Wilt u terugbellen?',
+   lateNote:m=>'wil morgen om '+m+' annuleren. Te laat: u belt terug.',
+   lateCap:'De assistent leest de regel van uw zaak voor. Over uitzonderingen beslist u zelf.'
+  }},
+kapper:{
+  name:'Kapsalon Lien',kind:'Kapper',ini:'KL',icon:'i-scissors',phone:'089 00 12 00',
+  p:{name:'Lotte V.'},open:[9,18],closed:[0],tag:'Knippen',dur:45,
+  pk:'Dit voorbeeld toont Vangnet Agenda: afspraken komen rechtstreeks in uw agenda.',
+  base:[[1,'9:00',45,'Els D.','Knippen'],[1,'10:00',90,'Mia S.','Kleuren'],[1,'13:30',45,'Eva M.','Knippen',1],[1,'14:30',45,'Nina G.','Knippen'],[1,'16:00',90,'Sara W.','Kleuren',1],
+    [2,'9:30',45,'Tom V.','Knippen'],[2,'10:30',45,'Bea V.','Knippen'],[2,'11:30',90,'Fien R.','Kleuren'],[2,'15:00',45,'Max D.','Knippen'],[2,'16:00',45,'Tim R.','Knippen'],
+    [3,'9:00',90,'Hugo K.','Kleuren'],[3,'11:00',45,'Jos A.','Knippen'],[3,'12:30',45,'Koen B.','Knippen'],[3,'15:00',90,'Piet J.','Kleuren'],[3,'16:30',45,'Wim T.','Knippen'],
+    [4,'9:00',45,'Lars H.','Knippen'],[4,'10:00',45,'Mia S.','Knippen'],[4,'11:00',90,'Els D.','Kleuren'],[4,'13:30',45,'Sara W.','Knippen'],[4,'15:30',45,'Eva M.','Knippen']],
+  offerBook:[[1,'12:00'],[2,'13:30'],[4,'14:30']],offerMove:[[2,'13:00'],[3,'14:00'],[4,'14:30']],pickBook:0,pickMove:1,
+  appt:{3:[1,'12:00'],4:[3,'14:00'],5:[2,'14:00']},
+  lateSeed:[{n:'Noor L.',t:'wilde gisteren annuleren, te laat. U belt terug.'}],
+  t:{
+   hello:'Goedendag, u belde Kapsalon Lien en we konden net niet opnemen. Dit is de automatische assistent van de salon. Waarvoor belde u? U kunt hier ook een afspraak maken.',
+   bossMissed:'Gemiste oproep van 0470 00 12 34. De beller kreeg een bericht van de assistent.',
+   ask:'Ik wil graag een afspraak om te knippen.',
+   offer:'Goedendag, dit is de automatische assistent van Kapsalon Lien. Voor knippen (ongeveer 45 minuten) zijn deze plekken vrij:',
+   pending:'Bedankt. Kapsalon Lien bevestigt uw afspraak zo snel mogelijk.',
+   bossNew:w=>'Nieuwe afspraak: Lotte V., knippen, '+w+'. Goedkeuren?',
+   done:w=>'Uw afspraak staat vast: knippen, '+w+' bij Kapsalon Lien. Duur ongeveer 45 minuten. Verplaatsen of annuleren kan hier.',
+   askMove:'Ik wil mijn afspraak verplaatsen.',
+   moveQ:w=>'Natuurlijk. Uw afspraak is nu '+w+'. Naar welke plek wilt u verplaatsen?',
+   pendingMove:'Bedankt. Kapsalon Lien bevestigt de wijziging zo snel mogelijk.',
+   bossMove:w=>'Wijziging: Lotte V. wil verplaatsen naar '+w+'. Goedkeuren?',
+   moved:w=>'Uw afspraak is verplaatst naar '+w+'.'+remTxt(),
+   askCancel:'Ik wil mijn afspraak annuleren.',
+   rem:m=>'Goedendag Lotte, morgen om '+m+' verwachten we u bij Kapsalon Lien voor knippen. Dit is een automatisch bericht van de salon.',
+   late:m=>'Uw afspraak is morgen om '+m+'. Annuleren in dit gesprek kan tot 24 uur vooraf. Zo kort van tevoren bekijkt Lien dit liever zelf. U wordt morgen teruggebeld vóór 12:00.',
+   bossLate:m=>'Lotte V. wil de afspraak van morgen om '+m+' annuleren. Dat is binnen 24 uur. Wilt u haar terugbellen?',
+   lateNote:m=>'wil morgen om '+m+' annuleren. Te laat: u belt terug.',
+   lateCap:'Zo kort van tevoren verwijst de assistent door naar de zaak. U beslist zelf.'
+  }}
+};
+const KEYS={garage:'garage',loodgieter:'loodgieter',installateur:'loodgieter',kapper:'kapper'};
+const NOW={1:[0,'10:12'],2:[0,'10:14'],3:[0,'11:05'],4:[2,'16:20'],5:[1,'9:00'],6:[1,'7:30']};
+
+/* ---------- toestand ---------- */
+let runId=0,paused=false,vt=0,biz='garage',cur=0,tourOn=false,listMode=false,compleet=false;
+const LAST=()=>compleet?6:4;
+const remTxt=()=>compleet?' De dag ervoor krijgt u een herinnering.':'';
+const A={ev:[],offers:[],
+  get(id){return this.ev.find(e=>e.id===id)},
+  add(e){this.ev.push(e);sync()},
+  patch(id,p){const e=this.get(id);if(e){Object.assign(e,p);sync()}},
+  del(id){this.ev=this.ev.filter(e=>e.id!==id);sync()},
+  setOffers(o){this.offers=o;sync()}
+};
+
+/* ---------- agenda ---------- */
+const plot=$('#plot'),els=new Map();
+let nowEl=null,hlEl=null,closedEls=[];
+function buildCal(){
+  const head=$('#calHead');head.replaceChildren(document.createElement('span'));
+  DAYS.forEach((d,i)=>{const c=document.createElement('div');c.className='dh';c.dataset.d=i;c.innerHTML='<small></small><b></b>';c.firstChild.textContent=d;c.lastChild.textContent=dt(i).getDate();head.appendChild(c)});
+  const hours=$('#hours');hours.replaceChildren();
+  for(let h=8;h<18;h++){const s=document.createElement('span');s.style.top='calc('+(h-8)+' * var(--hh))';s.textContent=h+':00';if(h===8)s.style.transform='translateY(2px)';hours.appendChild(s)}
+  $('#agWeek').textContent=weekRange();
+  hlEl=document.createElement('div');hlEl.className='hl';plot.appendChild(hlEl);
+  nowEl=document.createElement('div');nowEl.className='nowline';nowEl.hidden=true;plot.appendChild(nowEl);
+}
+function setBizCal(B){
+  const cal=$('#cal');
+  cal.style.setProperty('--o0',(B.open[0]*60-FROM));cal.style.setProperty('--o1',(B.open[1]*60-FROM));
+  closedEls.forEach(e=>e.remove());closedEls=[];
+  B.closed.forEach(d=>{const e=document.createElement('div');e.className='closed';e.style.setProperty('--d',d);e.textContent='Gesloten';plot.insertBefore(e,plot.firstChild);closedEls.push(e)});
+  listMode=!!B.list;$('#agenda').classList.toggle('list',listMode);
+  $('#agTitle').textContent=listMode?'Wat u krijgt':'Agenda van '+B.name;
+  $('#agWeek').textContent=listMode?'Zonder agenda':weekRange();
+}
+function setToday(d,min){
+  $$('.dh').forEach(e=>e.classList.toggle('now',+e.dataset.d===d));
+  if(d==null||min<FROM||min>=18*60){nowEl.hidden=true;return}
+  nowEl.hidden=false;nowEl.style.setProperty('--d',d);nowEl.style.setProperty('--s',min-FROM);
+}
+function highlight(d){hlEl.style.setProperty('--d',d==null?0:d);hlEl.classList.toggle('on',d!=null)}
+const ovlEls=new Map();
+const momTxt=(e,call)=>{
+  if(e.st==='cancel')return 'Geannuleerd';
+  if(call)return 'Moment: '+(e.mom||'');
+  const t=DAYS[e.d]+' '+dt(e.d).getDate()+' '+MONS[dt(e.d).getMonth()]+', '+hm(e.s);
+  return e.st==='pending'?t+' · wacht op uw ja':e.flag?t+' · te laat: u belt terug':e.conf?t+' · klant bevestigde':t;
+};
+function syncList(){
+  const ul=$('#ovlList');
+  const want=A.ev.slice().sort((a,b)=>((b.id==='me')-(a.id==='me'))||((a.d*1440+a.s)-(b.d*1440+b.s)));
+  const keep=new Set(want.map(e=>e.id));
+  ovlEls.forEach((el,k)=>{if(!keep.has(k)){ovlEls.delete(k);el.classList.add('gone');setTimeout(()=>el.remove(),REDUCED?0:480)}});
+  want.forEach((e,i)=>{
+    const call=e.svc==='Terugbellen';
+    let el=ovlEls.get(e.id);
+    if(!el){el=document.createElement('li');el.innerHTML='<span class="ib"></span><b></b><span class="d"></span><span class="m"></span>';el.firstChild.appendChild(ico(call?'i-missed':'i-calplus'));ovlEls.set(e.id,el)}
+    el.className='ov '+e.kind+(e.st==='pending'?' pending':'')+(e.st==='cancel'?' cancel':'')+(e.conf?' conf':'')+(e.flag?' flag':'');
+    el.children[1].textContent=(call?'Terugbellen: ':'Plaatsbezoek: ')+e.name;
+    el.children[2].textContent=call?(e.det||''):(e.det||e.svc||'');
+    el.children[3].textContent=momTxt(e,call);
+    const ref=ul.children[i];if(ref!==el)ul.insertBefore(el,ref||null);
+  });
+  $('#ovNone').hidden=want.length>0;
+}
+function sync(){
+  if(listMode){syncList();return}
+  const want=new Map();
+  A.offers.forEach((o,i)=>want.set('o'+i,{d:o.d,s:o.s,du:o.du,name:'Vrij',svc:'',kind:'offer',id:'o'+i}));
+  A.ev.forEach(e=>want.set(e.id,e));
+  els.forEach((el,k)=>{if(!want.has(k)){els.delete(k);el.classList.add('gone');setTimeout(()=>el.remove(),REDUCED?0:480)}});
+  want.forEach((e,k)=>{
+    let el=els.get(k);
+    if(!el){el=document.createElement('div');el.innerHTML='<b class="n"></b><span class="s"></span><i class="mk"></i>';plot.appendChild(el);els.set(k,el)}
+    el.className='ev '+e.kind+(e.du<=30?' short':'')+(e.st==='pending'?' pending':'')+(e.st==='cancel'?' cancel':'')+(e.unconf?' unconf':'')+(e.conf?' conf':'')+(e.flag?' flag':'');
+    el.style.setProperty('--d',e.d);el.style.setProperty('--s',e.s-FROM);el.style.setProperty('--du',e.du);
+    el.firstChild.textContent=e.name;
+    el.children[1].textContent=e.kind==='offer'?'':e.st==='pending'?'wacht op u':e.flag?'terugbellen':(e.svc||'');
+  });
+  nowEl&&plot.appendChild(nowEl);
+}
+function clearAgendaNow(){els.forEach(el=>el.remove());els.clear();ovlEls.forEach(el=>el.remove());ovlEls.clear();A.ev=[];A.offers=[]}
+
+/* ---------- statusregel en balk onderaan ---------- */
+const stEl=$('#status'),stLine=$('#statusline'),dock=$('#dock');
+let agendaSeen=true,lastStatus='';
+function status(t){
+  lastStatus=t;stEl.textContent=t;$('#dockTx').textContent=t;
+  stLine.classList.remove('flash');void stLine.offsetWidth;stLine.classList.add('flash');
+  updateDock();
+}
+function updateDock(){
+  const small=innerWidth<1100;
+  const show=small&&!agendaSeen&&running()&&lastStatus;
+  dock.classList.toggle('show',!!show);document.body.classList.toggle('pad',small);
+}
+new IntersectionObserver(es=>{agendaSeen=es[0].intersectionRatio>.35;updateDock()},{threshold:[0,.35,.7]}).observe($('#agenda'));
+addEventListener('resize',updateDock);
+dock.addEventListener('click',()=>$('#agenda').scrollIntoView({behavior:REDUCED?'auto':'smooth',block:'start'}));
+function caption(t){$('#caption').textContent=t}
+function hint(t){$('#hint').textContent=t}
+
+/* ---------- telefoon / gesprek ---------- */
+const chatEl=$('#chat'),typedEl=$('#typed'),phEl=$('#ph'),caretEl=$('#caret'),sendEl=$('#send');
+function lineNodes(lines){
+  const arr=Array.isArray(lines)?lines:[lines];
+  return arr.map(l=>{const d=document.createElement('span');d.className='l';let t=l;
+    if(typeof l==='object'){t=l.t;d.className+=' '+(l.c||'')}
+    d.textContent=t;return d});
+}
+const txt=lines=>(Array.isArray(lines)?lines.map(l=>typeof l==='object'?l.t:l):[lines]).join(' ');
+function bubble(kind,lines,time,labels){
+  const msg=document.createElement('div');msg.className='msg '+kind;
+  const g=document.createElement('div');g.className='grp';
+  const b=document.createElement('div');b.className='b';
+  lineNodes(lines).forEach(n=>b.appendChild(n));
+  const t=document.createElement('span');t.className='t';t.appendChild(document.createTextNode(time));
+  if(kind==='out')t.appendChild(ico('i-checks'));
+  b.appendChild(t);g.appendChild(b);msg.appendChild(g);
+  let buttons=[],qr=null;
+  if(labels){qr=document.createElement('div');qr.className='qr';buttons=labels.map(l=>{const x=document.createElement('button');x.type='button';x.textContent=l;qr.appendChild(x);return x});g.appendChild(qr)}
+  return {msg,qr,buttons,b};
+}
+const chat={
+  scroll(){chatEl.scrollTo({top:chatEl.scrollHeight,behavior:REDUCED?'auto':'smooth'})},
+  clear(){chatEl.replaceChildren();this.tp=null},
+  idle(B){chatEl.replaceChildren();const d=document.createElement('div');d.className='idle';d.appendChild(ico('i-chat'));d.appendChild(document.createTextNode('Kies een situatie om het gesprek te zien.'));chatEl.appendChild(d)},
+  add(kind,lines,time,labels){const m=bubble(kind,lines,time,labels);chatEl.appendChild(m.msg);this.scroll();return m},
+  pill(t,cls){const p=document.createElement('div');p.className='pillmsg '+(cls||'');if(cls==='missed')p.appendChild(ico('i-missed'));p.appendChild(document.createTextNode(t));chatEl.appendChild(p);this.scroll();return p},
+  typing(on){
+    if(on&&!this.tp){const t=document.createElement('div');t.className='typing';t.setAttribute('aria-hidden','true');t.innerHTML='<i></i><i></i><i></i>';chatEl.appendChild(t);this.tp=t;this.scroll()}
+    if(!on&&this.tp){this.tp.remove();this.tp=null}
+  }
+};
+function setOwner(who,B){
+  const boss=who==='baas';
+  $('#owner').textContent=boss?'Uw telefoon, om 07:30':'Telefoon van de klant';
+  $('#who').textContent=boss?'Uw assistent':B.name;
+  $('#sub').textContent=boss?'Voor '+B.name:'Zakelijk account';
+  $('#av').textContent=B.ini;
+}
+function setClock(abs){$('#clock').textContent=hm(abs);const d=Math.floor(abs/1440);setToday(d,abs%1440)}
+function setTyped(s){typedEl.textContent=s;const on=s.length>0;phEl.hidden=on;caretEl.hidden=!on;sendEl.classList.toggle('on',on)}
+
+/* ---------- melding aan de baas ---------- */
+const bossEl=$('#boss'),bossBody=$('#bossBody');
+let bossTimer=null;
+const boss={
+  empty(){bossBody.replaceChildren();const e=document.createElement('p');e.className='empty';e.textContent='Hier ziet u wat de assistent u doorgeeft.';bossBody.appendChild(e)},
+  clear(){clearTimeout(bossTimer);bossEl.classList.remove('show');this.empty()},
+  say(lines,btns,time){
+    clearTimeout(bossTimer);const e=$('.empty',bossBody);e&&e.remove();
+    const m=bubble('in',lines,time||'');m.msg.style.animationDuration='.3s';
+    const grp=$('.grp',m.msg);let q=null;
+    if(btns){q=document.createElement('div');q.className='bq';btns.forEach((l,i)=>{const b=document.createElement('button');b.type='button';b.tabIndex=-1;if(i===0){b.className='go';b.appendChild(ico('i-check'))}else{b.className='no';b.appendChild(ico('i-x'))}b.appendChild(document.createTextNode(l));q.appendChild(b)});grp.appendChild(q)}
+    bossBody.appendChild(m.msg);this.q=q;bossEl.classList.add('show');
+    if(!btns)bossTimer=setTimeout(()=>bossEl.classList.remove('show'),6500);
+  },
+  tap(i,time){
+    const b=this.q&&this.q.children[i];if(!b)return;b.classList.add('tap','on');
+    setTimeout(()=>{const o=bubble('out',['Goed'],time||'');bossBody.appendChild(o.msg)},REDUCED?0:520);
+    bossTimer=setTimeout(()=>bossEl.classList.remove('show'),3800);
+  }
+};
+
+/* ---------- lijstje te laat afgebeld ---------- */
+const late={items:[],
+  set(a){this.items=a.slice();this.draw(false)},
+  add(i){this.items.push(i);this.draw(true)},
+  draw(){
+    const ul=$('#lateList');ul.replaceChildren();
+    if(!this.items.length){const p=document.createElement('li');p.className='none';p.style.background='none';p.style.padding='6px 0 0';p.textContent='Niemand. Alles kwam op tijd.';ul.appendChild(p)}
+    this.items.forEach(i=>{const li=document.createElement('li');li.innerHTML='<b></b><span></span>';li.firstChild.textContent=i.n;li.lastChild.textContent=i.t;ul.appendChild(li)});
+    const c=$('#lateCnt');c.textContent=this.items.length;c.classList.toggle('has',this.items.length>0);
+  }
+};
+
+/* ---------- context van een run ---------- */
+function running(){return cur>0||tourOn}
+function makeCtx(id,manual){
+  const g=()=>{if(id!==runId)throw CANCEL};
+  const c={id,manual,B:BIZ[biz],abs:0},K=manual?1.3:1;
+  c.approve=()=>c.B.list||$('#approve').getAttribute('aria-checked')==='true';
+  c.wait=async ms=>{g();let left=ms/SPEED,prev=performance.now();while(left>0){await sleep(Math.min(40,left));g();const n=performance.now(),d=n-prev;prev=n;if(!paused){left-=d;vt+=d*SPEED}}};
+  c.adv=m=>{c.abs+=m;setClock(c.abs)};
+  c.status=t=>{g();status(t)};
+  c.caption=t=>{g();caption(t)};
+  c.guard=g;
+  c.reset=async n=>{
+    g();const B=c.B;cur=n;markScen(n);$('#next').hidden=true;hint('');
+    chatEl.style.transition='opacity .22s';chatEl.style.opacity='0';await c.wait(240);
+    boss.clear();late.set(n===6?B.lateSeed:[]);
+    A.offers=[];highlight(null);
+    // agenda: basis + eventueel de afspraak van de klant
+    A.ev=[];
+    if(!B.list||n===6)B.base.forEach((r,i)=>A.ev.push({id:'b'+i,d:r[0],s:T(r[1]),du:r[2],name:r[3],svc:r[4]||'',kind:'other',st:'ok',unconf:!!r[5]&&compleet}));
+    if(B.list&&n===6)B.callSeed.forEach((x,i)=>A.ev.push({id:'c'+i,d:1,s:i,du:30,name:x.n,svc:'Terugbellen',det:x.t.charAt(0).toUpperCase()+x.t.slice(1),mom:'vandaag',kind:'other',st:'ok'}));
+    const ap=B.appt[n];
+    if(ap)A.ev.push({id:'me',d:ap[0],s:T(ap[1]),du:B.dur,name:B.p.name,svc:B.tag,det:B.det,kind:'mine',st:'ok'});
+    sync();
+    const [d,t]=NOW[n];c.abs=d*1440+T(t);setClock(c.abs);
+    setOwner(n===6?'baas':'klant',B);
+    chat.clear();
+    if(n!==6){chat.pill('Berichten in dit gesprek komen van de automatische assistent van '+B.name+'.','note')}
+    chat.pill(dayBtn(d),'');
+    chatEl.style.opacity='1';
+    await c.wait(260);
+  };
+  c.pill=(t,cls)=>{g();chat.pill(t,cls)};
+  c.say=async(lines,o={})=>{
+    g();chat.typing(true);const len=txt(lines).length;
+    await c.wait(REDUCED?400:clamp(450+len*8,700,1400)*K);chat.typing(false);g();
+    const m=chat.add('in',lines,hm(c.abs));if(o.onShow)o.onShow();
+    await c.wait((o.read!=null?o.read:clamp(400+len*11,700,2000))*K);return m;
+  };
+  c.me=async(text,o={})=>{
+    g();const typed=o.typed!==false;
+    if(typed&&!REDUCED){const step=clamp(1100/text.length,18,40);for(let i=1;i<=text.length;i++){setTyped(text.slice(0,i));await c.wait(step)}await c.wait(220)}
+    else await c.wait(200);
+    setTyped('');chat.add('out',[text],hm(c.abs));await c.wait(500);
+  };
+  c.ask=async(lines,labels,o={})=>{
+    g();chat.typing(true);const len=txt(lines).length;
+    await c.wait(REDUCED?400:clamp(450+len*8,700,1400)*K);chat.typing(false);g();
+    const m=chat.add('in',lines,hm(c.abs),labels);if(o.onShow)o.onShow();
+    let chosen=-1,waited=0;
+    m.buttons.forEach((b,i)=>b.addEventListener('click',()=>{if(chosen<0)chosen=i}));
+    if(manual){hint('Tik op een knop in het gesprek. Doet u niets, dan kiest de klant zelf.');m.qr.classList.add('attn')}
+    const limit=manual?12000:1300;
+    await c.wait(400);
+    while(chosen<0){await c.wait(50);waited+=50;if(waited>=limit){chosen=o.def||0;m.buttons[chosen].classList.add('tap');await c.wait(380)}}
+    hint('');m.qr.classList.remove('attn');m.qr.classList.add('done');
+    m.buttons.forEach((b,i)=>{b.disabled=true;if(i===chosen)b.classList.add('on')});
+    await c.wait(300);
+    chat.add('out',[labels[chosen]],hm(c.abs));await c.wait(500);
+    return chosen;
+  };
+  return c;
+}
+const mkOffer=(B,[d,t])=>({d,s:T(t),du:B.dur});
+const offerLabel=o=>dayBtn(o.d)+', '+hm(o.s);
+
+/* ---------- gedeelde stappen ---------- */
+async function commit(c,kind,d,s){
+  const B=c.B,w=when(d,s);
+  if(c.approve()){
+    c.adv(1);
+    await c.say(kind==='book'?B.t.pending:B.t.pendingMove);
+    if(kind==='book')A.add({id:'me',d,s,du:B.dur,name:B.p.name,svc:B.tag,det:B.det,kind:'mine',st:'pending'});
+    else A.patch('me',{d,s,st:'pending'});
+    c.status('Wacht op uw goedkeuring: '+B.p.name+', '+DAYS[d]+' '+hm(s)+'.');
+    c.caption(B.list?'Zonder agenda bevestigt u elk plaatsbezoek zelf. U krijgt er een bericht van.':'De eerste maand keurt u elke afspraak zelf goed. U krijgt er een bericht van.');
+    await c.wait(800);
+    boss.say(kind==='book'?B.t.bossNew(w):B.t.bossMove(w),['Goedkeuren','Afwijzen'],hm(c.abs));
+    await c.wait(1500);
+    boss.tap(0,hm(c.abs+16));
+    await c.wait(900);
+    c.adv(16);
+    A.patch('me',{st:'ok'});
+  }else{
+    c.adv(0);
+    if(kind==='book')A.add({id:'me',d,s,du:B.dur,name:B.p.name,svc:B.tag,det:B.det,kind:'mine',st:'ok'});
+    else A.patch('me',{d,s,st:'ok'});
+    c.caption('Zonder goedkeuring vooraf staat de afspraak gewoon vast in uw agenda.');
+    await c.wait(500);
+  }
+  c.status(kind==='book'?(B.list?'Plaatsbezoek bevestigd: ':'Nieuw in uw agenda: ')+B.p.name+', '+DAYS[d]+' '+hm(s)+'.':'Verplaatst naar '+DAYS[d]+' '+hm(s)+'.'+(B.list?'':' De oude plek is weer vrij.'));
+  await c.say(kind==='book'?B.t.done(w):B.t.moved(w));
+}
+async function moveFlow(c,intro){
+  const B=c.B,me=A.get('me');
+  const offers=B.offerMove.map(o=>mkOffer(B,o)),labels=offers.map(offerLabel);
+  const i=await c.ask(intro,labels,{def:B.pickMove,onShow:()=>{A.setOffers(offers);c.status(B.list?'De assistent stelt 3 momenten voor die u vooraf doorgaf.':'De assistent biedt 3 vrije plekken aan uit uw agenda.')}});
+  A.setOffers([]);
+  await commit(c,'move',offers[i].d,offers[i].s);
+  c.caption(B.list?'Het nieuwe moment staat in uw overzicht.':'De oude plek komt vrij voor een andere klant.');
+}
+
+/* ---------- de zes situaties ---------- */
+const SC={
+1:async c=>{
+  const B=c.B;
+  c.caption('Niemand neemt op. De beller krijgt daarna een bericht van uw zaak.');
+  await c.wait(700);
+  c.pill('Gemiste oproep · '+hm(c.abs),'missed');
+  c.status('Gemiste oproep van 0470 00 12 34 opgevangen.');
+  await c.wait(1200);
+  if(B.intake){
+    c.caption('De klant weet meteen met wie hij praat. Hij laat achter wat er is, waar het is en wanneer u mag terugbellen.');
+    const pi=await c.ask(B.t.hello,B.t.probL,{def:0});
+    const prob=B.t.probL[pi].toLowerCase();
+    await c.say(B.t.addrQ,{read:600});
+    await c.me(B.t.addr);
+    const wi=await c.ask(B.t.whenQ,B.t.whenL,{def:1});
+    const w=B.t.whenL[wi].toLowerCase();
+    c.adv(1);
+    await c.say(B.t.conf(prob,w),{onShow:()=>{A.add({id:'me',d:0,s:0,du:30,name:'0470 00 12 34',svc:'Terugbellen',det:prob.charAt(0).toUpperCase()+prob.slice(1)+', Dorpsstraat 12 in Genk',mom:w,kind:'mine',st:'ok'});c.status('Terugbelverzoek ontvangen: '+prob+', '+w+'.')}});
+    boss.say(B.t.bossCall(prob,w),null,hm(c.abs));
+    c.caption('U ziet het probleem, het adres en het terugbelmoment. Terug op kantoor belt u gericht terug.');
+    await c.wait(1800);
+    return;
+  }
+  await c.say(B.t.hello,{read:2300});
+  c.caption('De klant weet meteen met wie hij praat: een automatische assistent van de zaak.');
+  boss.say(B.t.bossMissed,null,hm(c.abs));
+  await c.wait(2200);
+  c.caption('U hoeft niets te doen. Wie wil, antwoordt meteen en kan een afspraak maken.');
+  await c.wait(1500);
+},
+2:async c=>{
+  const B=c.B;
+  c.caption(B.list?'De klant wil een plaatsbezoek. U geeft vooraf door op welke momenten dat kan.':'De klant wil een afspraak. De vrije plekken komen rechtstreeks uit uw agenda.');
+  await c.me(B.t.ask);
+  const offers=B.offerBook.map(o=>mkOffer(B,o)),labels=offers.map(offerLabel);
+  const i=await c.ask(B.t.offer,labels,{def:B.pickBook,onShow:()=>{A.setOffers(offers);c.status(B.list?'De assistent stelt 3 momenten voor die u vooraf doorgaf.':'De assistent biedt 3 vrije plekken aan uit uw agenda.')}});
+  A.setOffers([]);
+  await commit(c,'book',offers[i].d,offers[i].s);
+  c.caption(B.list?'Het plaatsbezoek staat in uw overzicht. U zet het zelf in uw agenda.':'De afspraak staat in uw eigen agenda. U ziet alles zoals vroeger.');
+  await c.wait(1600);
+},
+3:async c=>{
+  const B=c.B;
+  c.caption(B.list?'De klant vraagt een ander moment. U bevestigt zelf.':'De klant verplaatst zelf, alleen naar plekken die uw agenda vrijgeeft.');
+  await c.me(B.t.askMove);
+  await moveFlow(c,B.t.moveQ(when(A.get('me').d,A.get('me').s)));
+  await c.wait(1500);
+},
+4:async c=>{
+  const B=c.B,me=A.get('me'),m=hm(me.s);
+  c.caption('Annuleren kan niet altijd meer. De assistent leest de regel van uw zaak voor.');
+  await c.me(B.t.askCancel);
+  c.adv(1);
+  await c.say(B.t.late(m),{onShow:()=>{A.patch('me',{flag:true});late.add({n:B.p.name,t:B.t.lateNote(m)});boss.say(B.t.bossLate(m),null,hm(c.abs));c.status('Te laat om te annuleren. De klant is doorverwezen naar uw zaak.')}});
+  c.caption(B.t.lateCap);
+  await c.wait(1800);
+},
+5:async c=>{
+  const B=c.B,me=A.get('me'),m=hm(me.s);
+  c.caption('De dag ervoor krijgt de klant een herinnering met drie knoppen.');
+  const L=B.remL||['Ik kom','Verplaatsen','Annuleren'];
+  const i=await c.ask(B.t.rem(m),L,{def:0});
+  if(i===0){
+    c.adv(1);A.patch('me',{conf:true});
+    c.status(B.p.name+' bevestigde: tot morgen.');
+    await c.say('Dank u, tot morgen!');
+    c.caption('Wie bevestigt, krijgt een vinkje in uw '+(B.list?'overzicht':'agenda')+'. Wie niet bevestigt, ziet u op het ochtendlijstje.');
+  }else if(i===1){
+    c.adv(1);
+    await moveFlow(c,'Geen probleem. Naar welke plek wilt u verplaatsen?');
+  }else{
+    c.adv(1);
+    A.patch('me',{st:'cancel'});
+    c.status(B.list?'Op tijd geannuleerd.':'Op tijd geannuleerd. De plek is weer vrij.');
+    await c.say(B.list?'Uw plaatsbezoek van morgen om '+m+' is geannuleerd. Loodgieterij Maes weet het.':'Uw afspraak van morgen om '+m+' is geannuleerd. De plek komt vrij voor een andere klant.');
+    A.del('me');
+    c.caption(B.list?'Op tijd annuleren kan gewoon.':'Op tijd annuleren kan gewoon. De plek is weer beschikbaar.');
+  }
+  await c.wait(1600);
+},
+6:async c=>{
+  const B=c.B,day=1;
+  c.caption('Elke ochtend om 07:30 krijgt u één lijstje met de dag.');
+  highlight(day);
+  c.status('Ochtendlijstje wordt verstuurd.');
+  await c.wait(900);
+  const evs=A.ev.filter(e=>e.d===day&&e.kind==='other'&&e.svc!=='Terugbellen').sort((a,b)=>a.s-b.s);
+  const lines=[{t:'Goedemorgen. Uw dag, '+dayLong(day)+':',c:'h'}];
+  const calls=()=>{if(B.callSeed){lines.push({t:'Terugbellen vandaag:',c:'h gap'});B.callSeed.forEach(x=>lines.push({t:x.n+', '+x.t,c:''}))}};
+  if(B.list){calls();lines.push({t:'Plaatsbezoeken vandaag:',c:'h gap'})}
+  evs.slice(0,6).forEach(e=>lines.push({t:hm(e.s)+'  '+e.name+(e.svc?', '+e.svc.toLowerCase():''),c:'num'}));
+  if(evs.length>6)lines.push({t:'en nog '+(evs.length-6)+' afspraken',c:''});
+  const un=evs.filter(e=>e.unconf);
+  if(un.length){lines.push({t:'Nog niet bevestigd door de klant:',c:'h gap'});un.forEach(e=>lines.push({t:hm(e.s)+'  '+e.name,c:'num'}))}
+  if(!B.list)calls();
+  lines.push({t:'Te laat afgebeld gisteren:',c:'h gap'});B.lateSeed.forEach(x=>lines.push({t:x.n+', '+x.t.replace(/^wilde gisteren /,'wilde ').replace(/^annuleerde gisteren te laat/,'annuleerde te laat'),c:''}));
+  lines.push({t:'Antwoord STOP als u de assistent wilt pauzeren.',c:'gap'});
+  await c.say(lines,{read:3200});
+  c.status(B.list?'Ochtendlijstje: '+B.callSeed.length+' terugbellen, '+evs.length+' plaatsbezoeken.':'Ochtendlijstje: '+evs.length+' afspraken, '+un.length+' niet bevestigd.');
+  c.caption(B.list?'Wat u vandaag terug moet bellen, staat bovenaan. Stoppen kan altijd.':'Wat onbevestigd blijft, ziet u. Zo kunt u zelf nog bellen. Stoppen kan altijd.');
+  await c.wait(2000);
+  highlight(null);
+}
+};
+
+/* ---------- aansturing ---------- */
+function markScen(n){$$('.sc').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.s===n)))}
+function stopAll(){runId++;paused=false;cur=0;tourOn=false;markScen(0);chat.typing(false);setTyped('');hint('');ui()}
+function ui(){
+  const t=tourOn;
+  $('#tourRow').hidden=!t;
+  $('#tour').hidden=t;$('#tourSm').hidden=t;
+  $('#pauseTx').textContent=paused?'Ga verder':'Pauzeer';
+  $('#pause use').setAttribute('href',paused?'#i-play':'#i-pause');
+  updateDock();
+}
+function showNext(n){
+  const nx=$('#next'),b=$('#nextBtn');
+  if(n<LAST()){b.textContent='Volgende: '+$('.sc[data-s="'+(n+1)+'"] b').textContent;b.dataset.s=n+1}else{b.textContent='Speel alles af';b.dataset.s='tour'}
+  nx.hidden=false;
+}
+function scrollToPhone(){
+  if(innerWidth<1100){const pc=$('#phonecol');const r=pc.getBoundingClientRect();if(r.top<-10||r.top>140)pc.scrollIntoView({behavior:REDUCED?'auto':'smooth',block:'start'})}
+}
+async function playOne(n,manual){
+  const id=++runId;paused=false;tourOn=false;const c=makeCtx(id,manual);ui();
+  scrollToPhone();
+  try{await c.reset(n);await SC[n](c);if(id===runId){cur=0;markScen(0);hint('');showNext(n);ui()}}
+  catch(e){if(e!==CANCEL)throw e}
+}
+async function playTour(){
+  const id=++runId;paused=false;tourOn=true;const c=makeCtx(id,false);ui();
+  scrollToPhone();
+  const bars=$$('#prog i');
+  try{
+    for(let n=1;n<=LAST();n++){
+      bars.forEach((b,i)=>{b.className=i<n-1?'done':i===n-1?'on':''});
+      await c.reset(n);await SC[n](c);await c.wait(700);
+    }
+    bars.forEach(b=>b.className='done');
+    if(id===runId){tourOn=false;cur=0;markScen(0);caption('Dat was alles. Kies een andere zaak of speel het nog eens af.');ui();showNext(LAST())}
+  }catch(e){if(e!==CANCEL)throw e}
+}
+const TOURSEC={garage:[55,70],kapper:[55,70],loodgieter:[65,80]}; // gemeten tourduur (scènes 1-4, 1-6) bij normaal tempo
+const SCL={1:['Gemiste oproep','Bericht naar de beller'],2:['Afspraak boeken','De klant kiest een plek'],3:['Verplaatsen','Naar een andere plek'],4:['Te laat annuleren','De regel van uw zaak'],5:['Herinnering','De dag ervoor'],6:['Ochtendlijstje','Voor u, om 07:30']};
+// scènes 5 en 6 (Vangnet Compleet) bestaan alleen als het keuzevakje aanstaat
+function applyCompleet(){
+  const n=LAST();
+  $$('.sc').forEach(b=>{b.hidden=+b.dataset.s>n});
+  $$('#prog i').forEach((b,i)=>{b.hidden=i>=n});
+  $('#prog').style.gridTemplateColumns='repeat('+n+',1fr)';
+  $('#legU').hidden=!compleet;
+  $('#tourSm').textContent='Alle '+(compleet?'zes':'vier')+' situaties na elkaar, ongeveer '+TOURSEC[biz][compleet?1:0]+' seconden. U kunt pauzeren.';
+}
+function idleState(){
+  const B=BIZ[biz];
+  stopAll();
+  applyCompleet();
+  $$('.sc').forEach(b=>{const l=(B.lbl&&B.lbl[b.dataset.s])||SCL[b.dataset.s];$('b',b).textContent=l[0];$('small',b).textContent=l[1]});
+  clearAgendaNow();
+  setBizCal(B);$('#pk').textContent=B.pk;$('#approve').hidden=!!B.list;$('#lede').textContent='Kies uw soort zaak en een situatie. U ziet het gesprek op de telefoon van de klant en tegelijk wat er '+(B.list?'bij u binnenkomt.':'in uw agenda gebeurt.');
+  late.set([]);boss.clear();
+  setOwner('klant',B);chat.idle();setTyped('');
+  caption('Neem er de tijd voor. Elke situatie duurt een paar seconden.');
+  $('#next').hidden=true;
+  setClock(T('10:12'));
+  lastStatus='';status(B.list?'Hier komt wat de assistent voor u opvangt. Kies een situatie.':'Dit is de agenda van de week. Kies een situatie.');lastStatus='';updateDock();
+  $$('#prog i').forEach(b=>b.className='');
+  setToday(null,0);
+  // basisweek zonder klantafspraak
+  if(!B.list)B.base.forEach((r,i)=>A.ev.push({id:'b'+i,d:r[0],s:T(r[1]),du:r[2],name:r[3],svc:r[4]||'',kind:'other',st:'ok',unconf:!!r[5]&&compleet}));
+  sync();
+}
+
+/* ---------- knoppen ---------- */
+$$('input[name=zaak]').forEach(i=>i.addEventListener('change',()=>{biz=i.value;idleState()}));
+$$('.sc').forEach(b=>b.addEventListener('click',()=>playOne(+b.dataset.s,true)));
+$('#compleet').addEventListener('change',e=>{compleet=e.currentTarget.checked;idleState()});
+$('#tour').addEventListener('click',playTour);
+$('#pause').addEventListener('click',()=>{paused=!paused;ui()});
+$('#stop').addEventListener('click',idleState);
+$('#nextBtn').addEventListener('click',e=>{const s=e.currentTarget.dataset.s;if(s==='tour')playTour();else playOne(+s,true)});
+$('#approve').addEventListener('click',e=>{const b=e.currentTarget;b.setAttribute('aria-checked',String(b.getAttribute('aria-checked')!=='true'))});
+
+/* ---------- start ---------- */
+buildCal();
+const want=KEYS[(qs.get('zaak')||'').toLowerCase()];
+if(want){biz=want;const r=$('input[name=zaak][value='+want+']');if(r)r.checked=true}
+idleState();
+Object.defineProperty(window,'__demoTijd',{get:()=>Math.round(vt)});
+})();
+</script>
+</body>
+</html>

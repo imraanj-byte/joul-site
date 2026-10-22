@@ -1,0 +1,38 @@
+# Joul Online Services
+
+> Joul zorgt dat lokale zaken in Limburg en Vlaams-Brabant geen klanten verliezen aan een onbeantwoorde telefoon. Kan de zaakvoerder niet opnemen, dan krijgt die beller automatisch een bericht namens zijn zaak, zodat hij niet doorbelt naar de volgende in Google. Klanten kunnen daarna zelf een afspraak boeken, verplaatsen of annuleren in de Google Agenda van de zaak.
+
+Werkgebied: Limburg en Vlaams-Brabant, België.
+Contact: imraan@joul.eu, 0468 31 46 51
+Oprichter: Imraan Joul, Bilzen (3740), België
+Website: https://joulonlineservices.eu
+
+## Pakketten (btw-vrij volgens de vrijstellingsregeling voor kleine ondernemingen, maandelijks opzegbaar)
+
+- **Vangnet** (vanaf €159 per maand): gemiste oproepen opvolgen. Elke gemiste oproep krijgt automatisch een bericht namens de zaak. Simpele vragen worden beantwoord. Werkt op het bestaande telefoonnummer via een doorschakeling bij de telefoonprovider.
+- **Vangnet Agenda** (vanaf €249 per maand): alles van Vangnet, plus boeken, verplaatsen en annuleren door de klant via sms of WhatsApp, in de Google Agenda van de zaak, volgens de annuleerregels van de zaak.
+- **Vangnet Compleet** (op aanvraag, zonder prijs op de site): alles van Vangnet Agenda, plus een herinnering de dag ervoor en een lijstje van klanten die te laat afbelden.
+- Daarbovenop komt een eenmalige installatie, die u vooraf in de offerte ziet.
+
+## Uw gegevens en uw agenda
+
+- De agenda blijft van de zaakvoerder. Die deelt één agenda en kan dat delen zelf op elk moment intrekken.
+- De eerste maand keurt de zaakvoerder elke afspraak goed. Daarna beslist hij zelf of dat automatisch mag.
+- Stoppen kan altijd met één bericht. Een klant die STOP typt, krijgt geen berichten meer.
+- Er wordt alleen naam, nummer, tijdstip en dienst gevraagd, nooit de reden van het bezoek.
+- Wij werken met Europese en Amerikaanse leveranciers, onder een verwerkersovereenkomst en de Europese standaardclausules. Uw agenda blijft bij Google en van u.
+
+## Wat het bericht doet
+
+Het bericht zegt dat het van een automatische assistent komt, laat weten dat de oproep gezien is en vraagt waarmee de zaak kan helpen. Zodra het over een prijs, een probleem of een klacht gaat, neemt de zaakvoerder over. Het bericht komt van een vast Belgisch nummer dat aan de zaak gekoppeld blijft.
+
+## Wat Joul niet doet
+
+- Geen websites bouwen en geen zoekmachinewerk voor de site van de klant.
+- Geen resultaten beloven: hoeveel bellers er in een bepaalde maand afhaken, hangt af van de zaak.
+
+## Pagina's
+
+- https://joulonlineservices.eu/ : startpagina met pakketten, voorbeeld, gegevens en agenda, werkwijze en veelgestelde vragen
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen.html : hoe het eerste pakket werkt
+- https://joulonlineservices.eu/blog.html : korte stukken voor zaakvoerders
