@@ -353,3 +353,12 @@ textarea.inp{min-height:96px;resize:vertical}
 /* lange titel "Verwerkersovereenkomst" past op een smalle gsm */
 @media (max-width:420px){.page h1{font-size:clamp(1.625rem,7.4vw,2.25rem);overflow-wrap:anywhere}}
 @media (max-width:420px){.prose{overflow-wrap:anywhere}}
+
+/* ---- v5: sms-voorbeeld, vragen op tekstpagina's, plaatslijst ---- */
+.prose .sms{margin:0 0 22px;padding:16px 18px;background:var(--bg-2);border:1px solid var(--hair);border-radius:var(--r-md) var(--r-md) var(--r-md) 6px;color:var(--ink);max-width:30em}
+.prose .sms b{display:block;margin-bottom:6px;font-size:.8125rem;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.prose .faq{margin:0 0 22px;max-width:none}
+.prose .faq summary{font-size:1.125rem;padding:18px 2px}
+.towns{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 12px}
+.towns a{display:inline-block;padding:9px 16px;border:1px solid var(--line);border-radius:980px;color:var(--ink);font-size:.9375rem}
+.towns a:hover{border-color:var(--blue);color:var(--link)}

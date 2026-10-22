@@ -4,8 +4,11 @@
 
 Werkgebied: Limburg en Vlaams-Brabant, België.
 Contact: imraan@joul.eu, 0468 31 46 51
-Oprichter: Imraan Joul, Bilzen (3740), België
+Oprichter: Imraan, Joul Online Services (Limburg, België)
 Website: https://joulonlineservices.eu
+Ondernemingsnummer: 1043.708.914
+Slogan: Joul zet het werk in beweging.
+De naam Joul komt van de joule, de eenheid waarin energie en arbeid gemeten worden. De bedrijfsnaam blijft Joul Online Services.
 
 ## Pakketten (btw-vrij volgens de vrijstellingsregeling voor kleine ondernemingen, maandelijks opzegbaar)
 
@@ -35,4 +38,24 @@ Het bericht zegt dat het van een automatische assistent komt, laat weten dat de 
 
 - https://joulonlineservices.eu/ : startpagina met pakketten, voorbeeld, gegevens en agenda, werkwijze en veelgestelde vragen
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen.html : hoe het eerste pakket werkt
+- https://joulonlineservices.eu/automatische-sms-na-gemiste-oproep.html : wat een automatische sms na een gemiste oproep is en hoe Vangnet het regelt
+- https://joulonlineservices.eu/voor-wie.html : voor welke beroepen Vangnet past
+- https://joulonlineservices.eu/werkgebied.html : alle steden in Limburg en Vlaams-Brabant waar Joul werkt
+- https://joulonlineservices.eu/gemiste-oproep-sms-kapper.html : gemiste oproepen opvangen voor kappers
+- https://joulonlineservices.eu/gemiste-oproep-sms-loodgieter.html : gemiste oproepen opvangen voor loodgieters
+- https://joulonlineservices.eu/gemiste-oproep-sms-schoonheidssalon.html : gemiste oproepen opvangen voor schoonheidssalons
+- https://joulonlineservices.eu/gemiste-oproep-sms-aannemer.html : gemiste oproepen opvangen voor aannemers
+- https://joulonlineservices.eu/gemiste-oproep-sms-restaurant.html : gemiste oproepen opvangen voor restaurants
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-bilzen.html : gemiste oproepen opvangen in Bilzen en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-hasselt.html : gemiste oproepen opvangen in Hasselt en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-genk.html : gemiste oproepen opvangen in Genk en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-sint-truiden.html : gemiste oproepen opvangen in Sint-Truiden en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-tongeren.html : gemiste oproepen opvangen in Tongeren en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-maasmechelen.html : gemiste oproepen opvangen in Maasmechelen en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-lanaken.html : gemiste oproepen opvangen in Lanaken en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-riemst.html : gemiste oproepen opvangen in Riemst en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-heusden-zolder.html : gemiste oproepen opvangen in Heusden-Zolder en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-lommel.html : gemiste oproepen opvangen in Lommel en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-leuven.html : gemiste oproepen opvangen in Leuven en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-tienen.html : gemiste oproepen opvangen in Tienen en omgeving
 - https://joulonlineservices.eu/blog.html : korte stukken voor zaakvoerders
