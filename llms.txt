@@ -38,6 +38,7 @@ Het bericht zegt dat het van een automatische assistent komt, laat weten dat de 
 
 - https://joulonlineservices.eu/ : startpagina met pakketten, voorbeeld, gegevens en agenda, werkwijze en veelgestelde vragen
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen.html : hoe het eerste pakket werkt
+- https://joulonlineservices.eu/veelgestelde-vragen.html : antwoorden op vragen over prijs, bestaand nummer, wat klanten zien, privacy, zorgverleners, stoppen en opstarttijd
 - https://joulonlineservices.eu/automatische-sms-na-gemiste-oproep.html : wat een automatische sms na een gemiste oproep is en hoe Vangnet het regelt
 - https://joulonlineservices.eu/voor-wie.html : voor welke beroepen Vangnet past
 - https://joulonlineservices.eu/werkgebied.html : alle steden in Limburg en Vlaams-Brabant waar Joul werkt
@@ -46,6 +47,13 @@ Het bericht zegt dat het van een automatische assistent komt, laat weten dat de 
 - https://joulonlineservices.eu/gemiste-oproep-sms-schoonheidssalon.html : gemiste oproepen opvangen voor schoonheidssalons
 - https://joulonlineservices.eu/gemiste-oproep-sms-aannemer.html : gemiste oproepen opvangen voor aannemers
 - https://joulonlineservices.eu/gemiste-oproep-sms-restaurant.html : gemiste oproepen opvangen voor restaurants
+- https://joulonlineservices.eu/gemiste-oproep-sms-garage.html : gemiste oproepen opvangen voor garages
+- https://joulonlineservices.eu/gemiste-oproep-sms-dakwerker.html : gemiste oproepen opvangen voor dakwerkers
+- https://joulonlineservices.eu/gemiste-oproep-sms-elektricien.html : gemiste oproepen opvangen voor elektriciens
+- https://joulonlineservices.eu/gemiste-oproep-sms-verwarmingsinstallateur.html : gemiste oproepen opvangen voor verwarmingsinstallateurs
+- https://joulonlineservices.eu/gemiste-oproep-sms-nagelsalon.html : gemiste oproepen opvangen voor nagelsalons
+- https://joulonlineservices.eu/gemiste-oproep-sms-trimsalon.html : gemiste oproepen opvangen voor trimsalons
+- https://joulonlineservices.eu/gemiste-oproep-sms-bakker-slager.html : gemiste oproepen opvangen voor bakkers en slagers
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-bilzen.html : gemiste oproepen opvangen in Bilzen en omgeving
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-hasselt.html : gemiste oproepen opvangen in Hasselt en omgeving
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-genk.html : gemiste oproepen opvangen in Genk en omgeving
@@ -58,4 +66,20 @@ Het bericht zegt dat het van een automatische assistent komt, laat weten dat de 
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-lommel.html : gemiste oproepen opvangen in Lommel en omgeving
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-leuven.html : gemiste oproepen opvangen in Leuven en omgeving
 - https://joulonlineservices.eu/gemiste-oproepen-opvangen-tienen.html : gemiste oproepen opvangen in Tienen en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-hoeselt.html : gemiste oproepen opvangen in Hoeselt en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-beringen.html : gemiste oproepen opvangen in Beringen en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-houthalen-helchteren.html : gemiste oproepen opvangen in Houthalen-Helchteren en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-diepenbeek.html : gemiste oproepen opvangen in Diepenbeek en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-bree.html : gemiste oproepen opvangen in Bree en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-peer.html : gemiste oproepen opvangen in Peer en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-herk-de-stad.html : gemiste oproepen opvangen in Herk-de-Stad en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-diest.html : gemiste oproepen opvangen in Diest en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-landen.html : gemiste oproepen opvangen in Landen en omgeving
+- https://joulonlineservices.eu/gemiste-oproepen-opvangen-aarschot.html : gemiste oproepen opvangen in Aarschot en omgeving
+- https://joulonlineservices.eu/gemiste-oproep-sms-loodgieter-hasselt.html : gemiste oproepen opvangen voor loodgieters in Hasselt
+- https://joulonlineservices.eu/gemiste-oproep-sms-kapper-leuven.html : gemiste oproepen opvangen voor kappers in Leuven
+- https://joulonlineservices.eu/gemiste-oproep-sms-aannemer-sint-truiden.html : gemiste oproepen opvangen voor aannemers in Sint-Truiden
+- https://joulonlineservices.eu/gemiste-oproep-sms-restaurant-tongeren.html : gemiste oproepen opvangen voor restaurants in Tongeren
+- https://joulonlineservices.eu/gemiste-oproep-sms-garage-maasmechelen.html : gemiste oproepen opvangen voor garages in Maasmechelen
+- https://joulonlineservices.eu/gemiste-oproep-sms-elektricien-heusden-zolder.html : gemiste oproepen opvangen voor elektriciens in Heusden-Zolder
 - https://joulonlineservices.eu/blog.html : korte stukken voor zaakvoerders
