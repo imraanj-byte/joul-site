@@ -5,3 +5,7 @@
 /no-shows-verminderen.html   /                 301
 /blog-no-shows               /blog.html        301
 /blog-no-shows.html          /blog.html        301
+
+# Bronbestanden die niet bij de site horen
+/netlify/*      /404.html   404!
+/test/*         /404.html   404!
