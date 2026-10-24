@@ -14,8 +14,8 @@
 main{max-width:560px;margin:0 auto}
 .logo{font-weight:700;font-size:15px;color:var(--muted);margin-bottom:18px}
 video{width:100%;border-radius:18px;background:#000;display:block;box-shadow:0 20px 60px -25px rgba(0,0,0,.45)}
-.v{max-width:360px;margin:0 auto}.h{display:none}
-@media (min-width:760px){main{max-width:880px}.v{display:none}.h{display:block}}
+.v{max-width:360px;margin:0 auto}video{cursor:pointer}
+@media (min-width:760px){main{max-width:880px}}
 p{font-size:19px;line-height:1.45;margin:24px 8px 20px}
 .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;font-size:18px;padding:15px 30px;border-radius:999px}
 .sub{margin-top:14px;font-size:15px;color:var(--muted)}.sub a{color:var(--blue)}
@@ -24,8 +24,8 @@ p{font-size:19px;line-height:1.45;margin:24px 8px 20px}
 <body>
 <main>
 <div class="logo">Joul Online Services</div>
-<video class="v" src="/demo/praktijk.mp4" controls playsinline autoplay muted loop preload="metadata"></video>
-<video class="h" src="/demo/praktijk-16x9.mp4" controls playsinline autoplay muted loop preload="metadata"></video>
+<video id="d" playsinline autoplay muted loop preload="auto" title="Tik voor geluid"></video>
+<script>var v=document.getElementById("d"),w=matchMedia("(min-width:760px)").matches;v.className=w?"h":"v";v.src="/demo/praktijk"+(w?"-16x9":"")+".mp4";v.onclick=function(){v.muted=!v.muted;v.play()};</script>
 <p>U bent met een patiënt bezig en de telefoon gaat. Zo ziet wie belt dat Vangnet er toch voor u is.</p>
 <a class="btn" href="tel:+32468314651">Bel of mail Imraan</a>
 <div class="sub">0468 31 46 51 · <a href="mailto:imraan@joul.eu">imraan@joul.eu</a></div>
