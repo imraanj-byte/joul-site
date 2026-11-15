@@ -9,3 +9,4 @@
 # Bronbestanden die niet bij de site horen
 /netlify/*      /404.html   404!
 /test/*         /404.html   404!
+/.claude/*      /404.html   404!

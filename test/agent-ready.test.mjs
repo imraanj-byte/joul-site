@@ -119,4 +119,5 @@ test("llms.txt: bevat een 'wanneer gebruiken'-sectie met use cases en hoe een ag
 test("_redirects: bronbestanden worden niet geserveerd", () => {
   assert.match(read("_redirects"), /^\/netlify\/\*\s+\/404\.html\s+404!$/m);
   assert.match(read("_redirects"), /^\/test\/\*\s+\/404\.html\s+404!$/m);
+  assert.match(read("_redirects"), /^\/\.claude\/\*\s+\/404\.html\s+404!$/m);
 });
